@@ -300,7 +300,6 @@
             line-height: 42.69%;
             text-transform: uppercase;
             top: -40px;
-            // left: 0;
         }
         &::before {
             content: "";
@@ -319,11 +318,11 @@
         flex-wrap: wrap;
     }
     &__text-wrap {
-        max-width: 497px;
-        margin-right: 25px;
+        max-width: 467px;
+        margin-right: 15px;
     }
     &__title {
-        font-size: 64px;
+        font-size: 54px;
         line-height: 100%;
         color: #fff;
         @extend %roboto-500;
@@ -389,6 +388,80 @@
         }
     }
 }
+
+.about {
+    min-height: 948px;
+    position: relative;
+    &::after {
+        content: "про компанію";
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        color: #ffffff;
+        background-color: $green;
+        z-index: 3;
+        border-radius: 90px;
+        padding: 33px 38px;
+        font-size: 48px;
+        line-height: 42.69%;
+        text-transform: uppercase;
+        top: -40px;
+    }
+
+    &__inner {
+        padding: 86px 0 140px;
+        background: linear-gradient(180deg, rgba(255, 255, 255, 0.97) 94.79%, rgba(255, 255, 255, 0.9603) 100%);
+    }
+
+    &__text-wrap {
+        margin-top: 86px;
+        display: block;
+        margin: 0 auto;
+        max-width: 1001px;
+        text-align: center;
+    }
+    &__text-img {
+        display: block;
+        margin: 0 auto;
+    }
+    &__text-buisness {
+        margin: 50px 0 30px;
+        & span {
+            color: $red;
+        }
+    }
+    &__text-target {
+        margin-bottom: 30px;
+    }
+    &__text-buy {
+        & span {
+            color: $green;
+            text-transform: uppercase;
+        }
+    }
+
+    &__items {
+        margin-top: 51px;
+        display: flex;
+        justify-content: space-around;
+        flex-wrap: wrap;
+    }
+    &__item {
+        margin-top: 40px;
+        max-width: 153px;
+        text-align: center;
+    }
+    &__item-img {
+        display: inline-block;
+    }
+    &__item-text {
+        margin-top: 25px;
+        color: #393c44;
+        font-size: 20px;
+        line-height: 23px;
+        @extend %work-700;
+    }
+}
 // Контентная часть ----------------------------- End -------------------------------->
 
 // Fooooteerrrr ---------------------------------------------------------------------------------->
@@ -403,7 +476,7 @@
         background-position: center;
         height: 27px;
         width: 100%;
-        top: 0;
+        top: -20px;
     }
     &::after {
         content: "";
@@ -421,7 +494,7 @@
         flex-wrap: wrap;
         justify-content: space-between;
         align-items: center;
-        margin-top: 32px;
+        margin-top: 42px;
         z-index: 3;
     }
     &__logo {
