@@ -270,8 +270,128 @@
     }
 }
 
-// Fooooteerrrr ---------------------------------------------------------------------------------->
+// Контентная часть ------------------------------------------------------------->
+.consult {
+    margin-top: 120px;
+    position: relative;
 
+    &__inner {
+        min-height: 617px;
+        padding-bottom: 30px;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        position: relative;
+        background-image: url("../images/consult-bg.webp");
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+        &::after {
+            content: "консультація";
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            color: #ffffff;
+            background-color: $red;
+            z-index: 3;
+            border-radius: 90px;
+            padding: 33px 38px;
+            font-size: 48px;
+            line-height: 42.69%;
+            text-transform: uppercase;
+            top: -40px;
+            // left: 0;
+        }
+        &::before {
+            content: "";
+            position: absolute;
+            background-image: url("../images/icons/consult-before.svg");
+            background-repeat: no-repeat;
+            background-position: top;
+            height: 124px;
+            width: 100%;
+            top: -124px;
+        }
+    }
+    &__inner-wrap {
+        margin-top: 124px;
+        display: flex;
+        flex-wrap: wrap;
+    }
+    &__text-wrap {
+        max-width: 497px;
+        margin-right: 25px;
+    }
+    &__title {
+        font-size: 64px;
+        line-height: 100%;
+        color: #fff;
+        @extend %roboto-500;
+    }
+    &__text {
+        @extend %mont-500;
+        color: #fff;
+        margin-top: 24px;
+        margin-left: 30px;
+        max-width: 300px;
+    }
+    &__form {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 300px;
+        margin-right: 100px;
+    }
+    &__input-name,
+    &__input-phone {
+        max-width: 293px;
+        width: 100%;
+        background: #f9f9f9;
+        border: 2px solid rgba(148, 129, 129, 0.29);
+        border-radius: 38px;
+        padding: 26px 5px 8px 31px;
+        &::placeholder {
+            @extend %mont-500;
+            color: rgba(0, 0, 0, 0.28);
+            font-size: 24px;
+        }
+    }
+    &__input-name {
+        margin: 21px 0 51px;
+    }
+    &__btn {
+        margin: 36px 0 17px;
+        padding: 25px 48px;
+        // max-width: 233px;
+        // min-height: 71px;
+        font-size: 24px;
+        line-height: 28px;
+        @extend %roboto-500;
+        color: #fff;
+        background-color: $red;
+        border: 2px solid rgba(61, 46, 46, 0.46);
+        box-sizing: border-box;
+        border-radius: 38px;
+        text-transform: uppercase;
+        cursor: pointer;
+        &:hover {
+            filter: drop-shadow(3px 5px 6px rgba(0, 0, 0, 0.25));
+        }
+    }
+    &__form-text {
+        text-align: center;
+        font-size: 18px;
+        color: #fff;
+        max-width: 239px;
+        @extend %mont-500;
+        & span {
+            color: $red;
+        }
+    }
+}
+// Контентная часть ----------------------------- End -------------------------------->
+
+// Fooooteerrrr ---------------------------------------------------------------------------------->
 .footer {
     min-height: 231px;
     position: relative;
@@ -304,6 +424,8 @@
         margin-top: 32px;
         z-index: 3;
     }
+    &__logo {
+    }
     &__logo-partners {
         margin-bottom: 37px;
     }
@@ -312,7 +434,6 @@
     &__personal-data {
         color: #fff;
         font-size: 25px;
-        // line-height: 100%;
     }
     &__politics {
         max-width: 201px;
