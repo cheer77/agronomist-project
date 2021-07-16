@@ -270,4 +270,58 @@
     }
 }
 
+// Fooooteerrrr ---------------------------------------------------------------------------------->
+
+.footer {
+    min-height: 231px;
+    position: relative;
+    &::before {
+        content: "";
+        position: absolute;
+        background-image: url("../images/icons/footer-line.svg");
+        background-repeat: no-repeat;
+        background-position: center;
+        height: 27px;
+        width: 100%;
+        top: 0;
+    }
+    &::after {
+        content: "";
+        position: absolute;
+        background-image: url("../images/icons/footer-bg.svg");
+        background-repeat: no-repeat;
+        background-position: center;
+        height: 172px;
+        width: 100%;
+        bottom: 0;
+        z-index: -1;
+    }
+    &__inner {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-items: center;
+        margin-top: 32px;
+        z-index: 3;
+    }
+    &__logo-partners {
+        margin-bottom: 37px;
+    }
+    &__date,
+    &__politics,
+    &__personal-data {
+        color: #fff;
+        font-size: 25px;
+        // line-height: 100%;
+    }
+    &__politics {
+        max-width: 201px;
+    }
+    &__personal-data {
+        max-width: 259px;
+    }
+}
+
+// Fooooteerrrr ---------------------------------------------------------------------------------->
+
 @import "media";
