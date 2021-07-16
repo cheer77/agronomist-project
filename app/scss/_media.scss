@@ -1,0 +1,109 @@
+@media (max-width: 768px) {
+    body.lock {
+        overflow: hidden;
+    }
+
+    .container {
+        padding: 0 15px;
+    }
+
+    .header {
+        &__top {
+            position: fixed;
+            width: 100%;
+            z-index: 50;
+        }
+
+        &__top-inner {
+            // display: block;
+        }
+        &__logo {
+            z-index: 100;
+            margin-right: 10px;
+        }
+
+        &__contacts {
+            align-items: center;
+            font-size: 14px;
+            line-height: 21px;
+            // margin: 15px 0;
+            margin-right: 100px;
+            &::before {
+                // display: none;
+            }
+        }
+
+        // Кнопка Бургер меню ---------------------------->
+        &__menu-mob {
+            display: block;
+            position: absolute;
+            right: 10px;
+            top: 50px;
+            transform: translateY(-50%);
+            width: 60px;
+            height: 40px;
+            padding: 5px;
+            cursor: pointer;
+            & span {
+                display: block;
+                height: 2px;
+                width: 100%;
+                background-color: #ffffff;
+                margin-bottom: 5px;
+                transition: all 0.5s;
+            }
+        }
+        &__menu-mob-active {
+            padding-top: 12px;
+            & span {
+                margin-bottom: -2px;
+                transition: all 0.9s;
+                &:nth-child(1) {
+                    transform: rotate(-45deg);
+                }
+                &:nth-child(3) {
+                    transform: rotate(45deg);
+                }
+                &:nth-child(2) {
+                    display: none;
+                }
+            }
+        }
+        &__menu {
+            position: fixed;
+            // z-index: 2;
+            top: -1105px;
+            right: 0;
+            min-height: 100%;
+            width: 100%;
+            background: rgba(0, 0, 0, 0.44);
+            z-index: 10;
+            // transform: translateY(-1500px);
+            transition: all 0.7s;
+        }
+        &__menu-active {
+            top: 74px;
+        }
+
+        &__menu-items {
+            z-index: 9;
+            overflow: scroll;
+            display: block;
+            text-align: center;
+            overflow: auto;
+        }
+        &__menu-item {
+            margin-right: 0;
+            // padding: 14px 0;
+            margin-bottom: 50px;
+            &:first-child {
+                padding-top: 40px;
+            }
+        }
+        &__menu-link {
+            font-size: 21px;
+        }
+    }
+
+    // Кнопка Бургер меню ------------- End --------------->
+}

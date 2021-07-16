@@ -1,0 +1,27 @@
+$green: #16da12;
+$red: #eb1c1c;
+$text: #000000;
+
+%roboto-300 {
+    font-family: "Roboto";
+    font-weight: 300;
+}
+%roboto-500 {
+    font-family: "Roboto";
+    font-weight: 500;
+}
+%mont-500 {
+    font-family: "Montserrat";
+    font-weight: 500;
+}
+%work-700 {
+    font-family: "WorkSans";
+    font-weight: 700;
+}
+
+@function max($numbers...) {
+    @return m#{a}x(#{$numbers});
+}
+@function min($numbers...) {
+    @return m#{i}n(#{$numbers});
+}
