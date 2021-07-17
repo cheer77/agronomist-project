@@ -12,19 +12,15 @@
 
 // Для увеличения фото ------------------------------------>
 .minimized {
-    width: 300px;
+    // width: 600px;
     cursor: pointer;
-    border: 1px solid #fff;
-}
-.minimized:hover {
-    border: 1px solid yellow;
 }
 /* увеличенная картинка */
 #magnify {
     display: none;
     /* position: absolute; upd: 24.10.2016 */
     position: fixed;
-    max-width: 600px;
+    max-width: 700px;
     height: auto;
     z-index: 9999;
 }
@@ -40,7 +36,7 @@
     left: 0;
     height: 100%;
     width: 100%;
-    opacity: 0.5;
+    opacity: 0.9;
     z-index: 9990;
 }
 /* кнопка закрытия */
@@ -390,7 +386,7 @@
 }
 
 .about {
-    min-height: 948px;
+    // min-height: 948px;
     position: relative;
     &::after {
         content: "про компанію";
@@ -414,6 +410,7 @@
     }
 
     &__text-wrap {
+        padding: 0 15px;
         margin-top: 86px;
         display: block;
         margin: 0 auto;
@@ -462,6 +459,151 @@
         @extend %work-700;
     }
 }
+
+.goods {
+    position: relative;
+    &::before {
+        content: "";
+        position: absolute;
+        background: #393c44;
+        border-radius: 30px;
+        width: 1058.71px;
+        height: 4.55px;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+    &::after {
+        content: "товари";
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        color: #ffffff;
+        background-color: $red;
+        z-index: 3;
+        border-radius: 90px;
+        padding: 33px 38px;
+        font-size: 48px;
+        line-height: 42.69%;
+        text-transform: uppercase;
+        top: -40px;
+    }
+
+    &__inner {
+        background-color: #fff;
+    }
+    &__item-1 {
+        padding-top: 151px;
+    }
+
+    &__item-wrap {
+        display: flex;
+        justify-content: space-around;
+        flex-wrap: wrap;
+        min-height: 1116px;
+    }
+
+    &__sliders-title {
+        margin-bottom: 105px;
+        font-size: 34px;
+        line-height: 40px;
+        @extend %work-700;
+        & span {
+            padding: 9px 27px;
+            margin-left: 30px;
+            border: 1px solid #000000;
+            border-radius: 30px;
+            color: #393c44;
+            text-transform: uppercase;
+        }
+    }
+    &__sliders {
+        max-width: 704px;
+    }
+
+    &__slider-img {
+        margin: 0 auto;
+        max-width: 600px;
+    }
+    &__slider2-img {
+        margin: 0 auto;
+        max-width: 220px;
+    }
+
+    &__tabs {
+        max-width: 600px;
+    }
+    &__tab-top {
+        margin-bottom: 57px;
+    }
+    &__tab-item-about {
+        padding: 12px 112px;
+        background-color: $green;
+        border-radius: 30px;
+        font-size: 30px;
+        line-height: 35px;
+        @extend %work-700;
+        color: #fff;
+        transition: all 0.5s;
+        &:hover {
+            filter: drop-shadow(3px 5px 6px rgba(0, 0, 0, 0.25));
+        }
+    }
+    &__tab-item-setting {
+        padding: 13px 29px;
+        background-color: $red;
+        border-radius: 30px;
+        font-size: 30px;
+        line-height: 35px;
+        @extend %work-700;
+        color: #fff;
+        transition: all 0.5s;
+        &:hover {
+            filter: drop-shadow(3px 5px 6px rgba(0, 0, 0, 0.25));
+        }
+    }
+
+    &__tab-item--active {
+        position: relative;
+        &::after {
+            content: "";
+            position: absolute;
+            background-image: url("../images/icons/Arrow.svg");
+            width: 22px;
+            height: 15px;
+            top: 70px;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+    }
+    &__tab-content-item {
+        display: none;
+        &.goods__tab-content-item--active {
+            display: block;
+        }
+    }
+    &__tab-content-text {
+        line-height: 136.69%;
+        letter-spacing: -0.01em;
+        color: #000000;
+    }
+    &__tab-content-img {
+        max-width: 600px;
+    }
+}
+.swiper-button-prev {
+    &::after {
+        color: #747474;
+        margin-right: 20px;
+    }
+}
+
+.swiper-button-next {
+    &::after {
+        color: #747474;
+        margin-left: 20px;
+    }
+}
+
 // Контентная часть ----------------------------- End -------------------------------->
 
 // Fooooteerrrr ---------------------------------------------------------------------------------->
