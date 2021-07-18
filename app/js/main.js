@@ -19,14 +19,19 @@ $(function () {
     });
 
 
-    var swiper = new Swiper('.goods__slider-top', {
-        // Optional parameters
+    $('.goods__tab-item-sec').on('click', function (e) {
+
+        e.preventDefault();
+        $('.goods__tab-item-sec').removeClass('goods__tab-item-sec--active');
+        $(this).addClass('goods__tab-item-sec--active');
+
+        $('.goods__tab-content-item-sec').removeClass('goods__tab-content-item-sec--active');
+        $($(this).attr('href')).addClass('goods__tab-content-item-sec--active');
+
+    });
 
 
-        // If we need pagination
-        pagination: {
-            el: '.swiper-pagination',
-        },
+    const swiper = new Swiper('.slider__top-container', {
 
         // Navigation arrows
         navigation: {
@@ -35,6 +40,33 @@ $(function () {
         },
 
     });
+
+
+    const MySwiper = new Swiper('.slider__bottom-container', {
+        slidesPerView: 3,
+        pagination: {
+            el: '.swiper-pagination',
+            clickable: true,
+        },
+
+        // Navigation arrows
+        // navigation: {
+        //     nextEl: '.swiper-button-next',
+        //     prevEl: '.swiper-button-prev',
+        // },
+        navigation: {
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev',
+        },
+
+        // And if we need scrollbar
+        scrollbar: {
+            el: '.swiper-scrollbar',
+        },
+    });
+
+
+
 
 
 
