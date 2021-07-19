@@ -502,34 +502,49 @@
         flex-wrap: wrap;
     }
 
-    &__sliders-title {
+    &__sliders-title-wrap {
+        display: flex;
+        max-width: 636px;
+        justify-content: space-between;
         margin-bottom: 105px;
+    }
+    &__sliders-span {
+        height: 57px;
+        font-size: 34px;
+        line-height: 40px;
+        padding: 9px 27px;
+        border: 1px solid #000000;
+        border-radius: 30px;
+        color: #393c44;
+        text-transform: uppercase;
+        @extend %work-700;
+    }
+
+    &__sliders-title {
         font-size: 34px;
         line-height: 40px;
         @extend %work-700;
-        & span {
-            padding: 9px 27px;
-            margin-left: 30px;
-            border: 1px solid #000000;
-            border-radius: 30px;
-            color: #393c44;
-            text-transform: uppercase;
-        }
     }
 
     &__tabs,
     &__tabs-sec,
-    &__tabs-3 {
+    &__tabs-3,
+    &__tabs-4,
+    &__tabs-5 {
         max-width: 600px;
     }
     &__tab-top,
     &__tab-top-sec,
-    &__tab-top-3 {
+    &__tab-top-3,
+    &__tab-top-4,
+    &__tab-top-5 {
         margin-bottom: 57px;
     }
     &__tab-item-about,
     &__tab-item-about-sec,
-    &__tab-item-about-3 {
+    &__tab-item-about-3,
+    &__tab-item-about-4,
+    &__tab-item-about-5 {
         padding: 12px 112px;
         background-color: $green;
         border-radius: 30px;
@@ -544,7 +559,9 @@
     }
     &__tab-item-setting,
     &__tab-item-setting-sec,
-    &__tab-item-setting-3 {
+    &__tab-item-setting-3,
+    &__tab-item-setting-4,
+    &__tab-item-setting-5 {
         padding: 13px 29px;
         background-color: $red;
         border-radius: 30px;
@@ -560,7 +577,9 @@
 
     &__tab-item--active,
     &__tab-item-sec--active,
-    &__tab-item-3--active {
+    &__tab-item-3--active,
+    &__tab-item-4--active,
+    &__tab-item-5--active {
         position: relative;
         &::after {
             content: "";
@@ -575,11 +594,15 @@
     }
     &__tab-content-item,
     &__tab-content-item-sec,
-    &__tab-content-item-3 {
+    &__tab-content-item-3,
+    &__tab-content-item-4,
+    &__tab-content-item-5 {
         display: none;
         &.goods__tab-content-item--active,
         &.goods__tab-content-item-sec--active,
-        &.goods__tab-content-item-3--active {
+        &.goods__tab-content-item-3--active,
+        &.goods__tab-content-item-4--active,
+        &.goods__tab-content-item-5--active {
             display: block;
         }
     }
@@ -708,6 +731,137 @@
         padding: 200px 10px;
         margin-left: 23px;
         margin-bottom: 70px;
+    }
+}
+
+.settings {
+    &__inner {
+        padding-top: 1px;
+        padding-bottom: 200px;
+        background-color: #fff;
+    }
+    &__title {
+        margin-top: 95px;
+        text-align: center;
+        font-size: 48px;
+    }
+    &__items {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: wrap;
+        margin-top: 126px;
+        padding: 0 100px;
+    }
+    &__item {
+        max-width: 400px;
+        height: 415px;
+        margin-bottom: 92px;
+        position: relative;
+        &::after {
+            content: "";
+            position: absolute;
+            background-image: url("../images/icons/icon-zoom.svg");
+            width: 33px;
+            height: 33px;
+            right: 0;
+            bottom: 140px;
+        }
+    }
+    &__img {
+        display: block;
+        margin: 0 auto;
+        height: 299px;
+        object-fit: cover;
+    }
+}
+
+.contacts {
+    margin-bottom: 51px;
+    position: relative;
+    &::before {
+        content: "";
+        position: absolute;
+        background: #393c44;
+        border-radius: 30px;
+        width: 1058.71px;
+        height: 4.55px;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+    &::after {
+        content: "контакты";
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        color: #ffffff;
+        background-color: $red;
+        z-index: 3;
+        border-radius: 90px;
+        padding: 33px 38px;
+        font-size: 48px;
+        line-height: 42.69%;
+        text-transform: uppercase;
+        top: -40px;
+    }
+    &__inner {
+        background-color: #fff;
+        padding: 0 100px;
+    }
+    &__items {
+        padding-top: 76px;
+        margin-bottom: 69px;
+    }
+    &__item-nav,
+    &__item-phones,
+    &__item-email {
+        padding-left: 73px;
+        font-size: 35px;
+    }
+    &__item-nav {
+        margin-bottom: 20px;
+        position: relative;
+        &::after {
+            content: "";
+            position: absolute;
+            background-image: url("../images/icons/map-pin.svg");
+            width: 65px;
+            height: 79px;
+            left: 0;
+            top: -38px;
+        }
+    }
+    &__item-phones {
+        display: flex;
+        flex-direction: column;
+        position: relative;
+        &::after {
+            content: "";
+            position: absolute;
+            background-image: url("../images/icons/phone.svg");
+            width: 65px;
+            height: 65px;
+            left: 0;
+        }
+    }
+    &__item-phone {
+        margin-bottom: 20px;
+    }
+    &__item-email {
+        position: relative;
+        &::after {
+            content: "";
+            position: absolute;
+            background-image: url("../images/icons/gmail.svg");
+            width: 56px;
+            height: 56px;
+            left: 8px;
+            top: -10px;
+        }
+    }
+    &__map {
+        min-height: 610px;
+        padding-bottom: 40px;
     }
 }
 

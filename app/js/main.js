@@ -6,6 +6,20 @@ $(function () {
         $('body').toggleClass('lock');
     });
 
+    $(".header__menu a, .go-top").on("click", function (e) {
+        //отменяем стандартную обработку нажатия по ссылке
+        e.preventDefault();
+
+        //забираем идентификатор бока с атрибута href
+        var id = $(this).attr('href'),
+
+            //узнаем высоту от начала страницы до блока на который ссылается якорь
+            top = $(id).offset().top;
+
+        //анимируем переход на расстояние - top за 1500 мс
+        $('body,html').animate({ scrollTop: top }, 2500);
+    });
+
 
     $('.goods__tab-item').on('click', function (e) {
 
@@ -38,6 +52,27 @@ $(function () {
 
         $('.goods__tab-content-item-3').removeClass('goods__tab-content-item-3--active');
         $($(this).attr('href')).addClass('goods__tab-content-item-3--active');
+
+    });
+
+    $('.goods__tab-item-4').on('click', function (e) {
+
+        e.preventDefault();
+        $('.goods__tab-item-4').removeClass('goods__tab-item-4--active');
+        $(this).addClass('goods__tab-item-4--active');
+
+        $('.goods__tab-content-item-4').removeClass('goods__tab-content-item-4--active');
+        $($(this).attr('href')).addClass('goods__tab-content-item-4--active');
+
+    });
+    $('.goods__tab-item-5').on('click', function (e) {
+
+        e.preventDefault();
+        $('.goods__tab-item-5').removeClass('goods__tab-item-5--active');
+        $(this).addClass('goods__tab-item-5--active');
+
+        $('.goods__tab-content-item-5').removeClass('goods__tab-content-item-5--active');
+        $($(this).attr('href')).addClass('goods__tab-content-item-5--active');
 
     });
 
