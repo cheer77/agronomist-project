@@ -33,8 +33,6 @@ $(function () {
         $('html, body').animate({ scrollTop: 0 }, '25000');
     });
 
-    $('.items').slick();
-
     $('.goods__tab-item').on('click', function (e) {
 
         e.preventDefault();
@@ -93,10 +91,23 @@ $(function () {
 
     const swiper = new Swiper('.slider__top-container', {
 
+
         // Navigation arrows
         navigation: {
             nextEl: '.swiper-button-next',
             prevEl: '.swiper-button-prev',
+        },
+        pagination: {
+            el: '.swiper-pagination',
+            clickable: true,
+        },
+
+        breakpoints: {
+            580: {
+                pagination: {
+                    type: 'bullets'
+                },
+            }
         },
 
     });
@@ -132,7 +143,7 @@ $(function () {
                 slidesPerView: 2,
             },
             768: {
-                slidesPerView: 3,
+                slidesPerView: 2,
             },
         },
 

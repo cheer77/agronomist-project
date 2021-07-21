@@ -689,6 +689,20 @@
 .slider {
     max-width: 800px;
     &__top-container {
+        & .swiper-pagination {
+            bottom: 1px;
+        }
+        & .swiper-pagination-bullet {
+            width: 15px;
+            height: 15px;
+            line-height: 20px;
+            font-size: 14px;
+            background: rgba(196, 196, 196, 0.8);
+        }
+
+        & .swiper-pagination-bullet-active {
+            background: rgba(3, 0, 0, 0.56);
+        }
     }
     &__top-img {
         max-width: 600px;

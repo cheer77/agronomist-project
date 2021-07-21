@@ -349,10 +349,13 @@
             margin-bottom: 37px;
         }
         &__sliders-span {
-            height: 57px;
+            height: 37px;
             font-size: 25px;
-            line-height: 0px;
-            padding: 0px 27px;
+            display: flex;
+            max-width: 180px;
+            justify-content: center;
+            align-items: center;
+            margin: 0 auto;
         }
 
         &__tabs,
@@ -402,9 +405,16 @@
         margin-bottom: 40px;
         &__bottom-container {
             margin-bottom: 40px;
+            height: 260px;
             & .swiper-pagination {
                 bottom: -5px;
             }
+        }
+        & .swiper-pagination-bullet {
+            width: 10px;
+            height: 10px;
+            line-height: 10px;
+            font-size: 14px;
         }
     }
 
@@ -543,6 +553,7 @@
             padding-left: 0;
         }
         &__bottom-container {
+            height: 280px;
             margin-bottom: 20px;
             & .swiper-pagination {
                 bottom: -5px;
