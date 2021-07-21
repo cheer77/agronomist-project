@@ -415,6 +415,54 @@
         justify-content: center;
     }
 
+    .contacts {
+        &__item-nav {
+            margin-bottom: 20px;
+            position: relative;
+            &::after {
+                content: "";
+                position: absolute;
+                background-image: url("../images/icons/map-pi-mob.svg");
+                background-repeat: no-repeat;
+                width: 45px;
+                height: 60px;
+                left: 0;
+                top: -20px;
+            }
+        }
+        &__item-phones {
+            display: flex;
+            flex-direction: column;
+            position: relative;
+            &::after {
+                content: "";
+                position: absolute;
+                background-image: url("../images/icons/phone-mob.svg");
+                background-repeat: no-repeat;
+                width: 65px;
+                height: 65px;
+                left: 3px;
+                top: 15px;
+            }
+        }
+        &__item-phone {
+            margin-bottom: 20px;
+        }
+        &__item-email {
+            position: relative;
+            &::after {
+                content: "";
+                position: absolute;
+                background-image: url("../images/icons/gmail-mob.svg");
+                background-repeat: no-repeat;
+                width: 56px;
+                height: 56px;
+                left: 8px;
+                top: 0;
+            }
+        }
+    }
+
     .swiper-button-prev,
     .swiper-button-next {
         display: none;
