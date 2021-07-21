@@ -1,12 +1,12 @@
 $(function () {
 
-    $('.header__menu-mob').on('click', function (event) {
+    $('.header__menu-mob, .header__menu a').on('click', function (event) {
         $('.header__menu-mob').toggleClass('header__menu-mob-active');
         $('.header__menu').toggleClass('header__menu-active');
         $('body').toggleClass('lock');
     });
 
-    $(".header__menu a, .go-top").on("click", function (e) {
+    $(".header__menu a, .header__body-link").on("click", function (e) {
         //отменяем стандартную обработку нажатия по ссылке
         e.preventDefault();
 
@@ -20,6 +20,20 @@ $(function () {
         $('body,html').animate({ scrollTop: top }, 2500);
     });
 
+    var btn = $('#button');
+    $(window).scroll(function () {
+        if ($(window).scrollTop() > 1300) {
+            btn.addClass('show');
+        } else {
+            btn.removeClass('show');
+        }
+    });
+    btn.on('click', function (e) {
+        e.preventDefault();
+        $('html, body').animate({ scrollTop: 0 }, '25000');
+    });
+
+    $('.items').slick();
 
     $('.goods__tab-item').on('click', function (e) {
 
@@ -90,6 +104,8 @@ $(function () {
 
     const MySwiper = new Swiper('.slider__bottom-container', {
         slidesPerView: 3,
+        autoHeight: true,
+        spaceBetween: 10,
         pagination: {
             el: '.swiper-pagination',
             clickable: true,
@@ -104,12 +120,23 @@ $(function () {
         scrollbar: {
             el: '.swiper-scrollbar',
         },
+
+        breakpoints: {
+            310: {
+                slidesPerView: 1,
+            },
+            580: {
+                slidesPerView: 1,
+            },
+            640: {
+                slidesPerView: 2,
+            },
+            768: {
+                slidesPerView: 3,
+            },
+        },
+
     });
-
-
-
-
-
 
 
 
@@ -132,6 +159,22 @@ $(function () {
                 $('#close-popup, #magnify, #overlay').remove();
             });
         });
+    });
+
+    $("form").submit(function () { //Change
+        var th = $(this);
+        $.ajax({
+            type: "POST",
+            url: "mail.php", //Change
+            data: th.serialize()
+        }).done(function () {
+            alert("Thank you!");
+            setTimeout(function () {
+                // Done Functions
+                th.trigger("reset");
+            }, 1000);
+        });
+        return false;
     });
 
 

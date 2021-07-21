@@ -218,6 +218,10 @@
         background-color: $green;
         text-transform: uppercase;
         @extend %roboto-500;
+        transition: all 0.4s;
+        &:hover {
+            filter: drop-shadow(3px 5px 6px rgba(0, 0, 0, 0.25));
+        }
     }
 
     &__footer {
@@ -351,9 +355,25 @@
             font-size: 24px;
         }
     }
+    &__input-phone {
+        padding-left: 81px;
+    }
     &__input-name {
         margin: 21px 0 51px;
     }
+    &__input-label {
+        position: relative;
+        &::before {
+            content: "+38";
+            position: absolute;
+            @extend %mont-500;
+            color: rgba(0, 0, 0, 0.28);
+            font-size: 24px;
+            right: 74px;
+            top: 30px;
+        }
+    }
+
     &__btn {
         margin: 36px 0 17px;
         padding: 25px 48px;
@@ -635,6 +655,7 @@
         text-align: center;
         padding: 12px 110px;
         max-width: 318px;
+        min-height: 50px;
         background-color: $red;
         cursor: pointer;
         border-radius: 60px;
@@ -653,8 +674,14 @@
             background-image: url("../images/icons/YouTube-goods.svg");
             width: 38px;
             height: 30px;
-            top: 14px;
-            right: 65px;
+            top: 10px;
+            right: 80px;
+        }
+        &::before {
+            content: "Відео";
+            position: absolute;
+            top: 7px;
+            right: 135px;
         }
     }
 }
@@ -662,7 +689,6 @@
 .slider {
     max-width: 800px;
     &__top-container {
-        position: relative;
     }
     &__top-img {
         max-width: 600px;
@@ -676,18 +702,16 @@
 
     &__top-sec-img {
         margin: 0 auto;
-        max-width: 609px;
-        min-height: 346px;
+        // max-width: 609px;
     }
     &__top-sec-im img {
-        max-width: 100%;
+        // max-width: 100%;
         object-fit: cover;
     }
 
     &__bottom-container {
         margin-top: 40px;
-        position: relative;
-        min-height: 230px;
+        height: 270px;
         & .swiper-pagination {
             bottom: 1px;
         }
@@ -703,9 +727,6 @@
             background: rgba(3, 0, 0, 0.56);
         }
     }
-    &__bottom-img {
-        max-width: 220px;
-    }
     &__bottom-img img {
         max-width: 100%;
         object-fit: cover;
@@ -713,13 +734,20 @@
     }
 }
 
+.swiper-wrapper .swiper-slide {
+    // height: 350px;
+    // display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
 .swiper-button-prev {
     &::after {
         color: #747474;
         background-color: #fff;
-        padding: 150px 10px;
+        padding: 200px 10px;
         margin-right: 23px;
-        margin-bottom: 70px;
+        margin-bottom: 80px;
     }
 }
 
@@ -730,7 +758,7 @@
         margin-left: 20px;
         padding: 200px 10px;
         margin-left: 23px;
-        margin-bottom: 70px;
+        margin-bottom: 80px;
     }
 }
 
@@ -892,6 +920,37 @@
         bottom: 0;
         z-index: -1;
     }
+    .show {
+        display: inline-block;
+        background-color: #868686;
+        width: 50px;
+        height: 50px;
+        text-align: center;
+        border-radius: 5px;
+        margin: 30px;
+        position: fixed;
+        bottom: 30px;
+        right: 70px;
+        transition: background-color 0.3s;
+        z-index: 1000;
+    }
+    .show:hover {
+        cursor: pointer;
+        background-color: rgb(172, 172, 172);
+    }
+    .show:active {
+        background-color: #555;
+    }
+    .show::after {
+        content: "";
+        position: absolute;
+        background-image: url("../images/icons/arrow-top.svg");
+        width: 24px;
+        height: 14px;
+        color: #fff;
+        top: 16px;
+        left: 13px;
+    }
     &__inner {
         display: flex;
         flex-wrap: wrap;
@@ -916,6 +975,14 @@
     }
     &__personal-data {
         max-width: 259px;
+    }
+    &__date-mob {
+        display: none;
+        text-align: center;
+        padding-bottom: 10px;
+        margin-top: 30px;
+        color: #fff;
+        font-size: 25px;
     }
 }
 

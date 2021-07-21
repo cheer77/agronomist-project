@@ -23,3 +23,29 @@ main {
     padding: 0 83px;
     margin: 0 auto;
 }
+
+.btn-animation::after {
+    content: "";
+    display: inline-block;
+    height: 100%;
+    width: 100%;
+    border-radius: 100px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    transition: all 0.4s;
+}
+
+.btn-animation:active::after {
+    background: #fff;
+    transform: scaleX(1.2) scaleY(1.4);
+    opacity: 0;
+    transition: transform 0.1s;
+}
+.btn-animation--whitebg:active::after {
+    background: rgb(255, 2, 2);
+    transform: scaleX(1.6) scaleY(1.9);
+    opacity: 0;
+    transition: transform 0.1s;
+}

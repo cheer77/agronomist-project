@@ -1,3 +1,196 @@
+@media (max-width: 1380px) {
+    .slider {
+        max-width: 800px;
+        margin-bottom: 40px;
+        &__bottom-container {
+            margin-bottom: 50px;
+            & .swiper-pagination {
+                bottom: -5px;
+            }
+        }
+    }
+}
+
+@media (max-width: 1186px) {
+    .container {
+        padding: 0 40px;
+    }
+
+    .header {
+        &__logo {
+            margin-right: 10px;
+        }
+        &__menu-item {
+            margin-right: 30px;
+        }
+        &__contacts {
+            margin-left: 50px;
+        }
+    }
+
+    .slider {
+        max-width: 900px;
+        margin-bottom: 40px;
+        &__bottom-container {
+            margin-bottom: 50px;
+            height: 250px;
+            & .swiper-pagination {
+                bottom: -5px;
+            }
+        }
+    }
+
+    .footer {
+        min-height: 331px;
+
+        &__inner {
+            align-items: flex-end;
+        }
+        &__personal-data,
+        &__politics {
+            margin-top: 40px;
+        }
+    }
+}
+
+@media (max-width: 1024px) {
+    .header {
+        &__contacts {
+            margin-top: 20px;
+        }
+        &__body {
+            margin-bottom: 172px;
+        }
+    }
+
+    .consult {
+        &__inner {
+            padding-bottom: 80px;
+            &.consult__inner::after {
+                content: "консультація";
+                color: #ffffff;
+                background-color: #eb1c1c;
+                z-index: 3;
+                border-radius: 90px;
+                padding: 27px 30px;
+                font-size: 30px;
+                line-height: 42.69%;
+                text-transform: uppercase;
+                top: -32px;
+            }
+        }
+        &__inner-wrap {
+            justify-content: center;
+        }
+        &__text-wrap {
+            max-width: 100%;
+            padding: 0 20px;
+            margin-right: 0;
+        }
+        &__title {
+            text-align: center;
+            font-size: 40px;
+        }
+        &__text {
+            display: block;
+            margin: 0 auto;
+            color: #fff;
+            margin-top: 24px;
+            font-size: 19px;
+            max-width: 300px;
+            text-align: center;
+        }
+        .consult__form {
+            align-items: center;
+            width: 300px;
+            margin-right: 0;
+        }
+    }
+    .about::after {
+        background-color: #16da12;
+        text-align: center;
+        padding: 27px 30px;
+        font-size: 25px;
+        line-height: 92.69%;
+        top: -32px;
+    }
+
+    .goods {
+        &::before {
+            content: "";
+            position: absolute;
+            background: #393c44;
+            border-radius: 30px;
+            width: 600px;
+            height: 4.55px;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+        &::after {
+            color: #ffffff;
+            background-color: #eb1c1c;
+            z-index: 3;
+            border-radius: 90px;
+            padding: 27px 30px;
+            font-size: 30px;
+            text-transform: uppercase;
+            top: -32px;
+        }
+    }
+
+    .slider {
+        max-width: 600px;
+        margin-bottom: 40px;
+        &__bottom-container {
+            margin-bottom: 40px;
+            & .swiper-pagination {
+                bottom: -5px;
+            }
+        }
+    }
+
+    .settings {
+        &__inner {
+            padding-bottom: 50px;
+        }
+        &__title {
+            margin-top: 35px;
+        }
+        &__items {
+            margin-top: 70px;
+            justify-content: center;
+            padding: 50px;
+        }
+        &__item {
+            margin-bottom: 50px;
+        }
+    }
+
+    .contacts {
+        &::after {
+            padding: 27px 30px;
+            font-size: 30px;
+            top: -32px;
+        }
+        &::before {
+            width: 600px;
+            height: 4.55px;
+        }
+        &__inner {
+            padding: 0 50px;
+        }
+        &__items {
+            padding-top: 100px;
+        }
+
+        &__item-nav,
+        &__item-phones,
+        &__item-email {
+            padding-left: 93px;
+            font-size: 26px;
+        }
+    }
+}
 @media (max-width: 768px) {
     body.lock {
         overflow: hidden;
@@ -23,14 +216,11 @@
         }
 
         &__contacts {
+            margin-top: 0;
             align-items: center;
             font-size: 14px;
             line-height: 21px;
-            // margin: 15px 0;
             margin-right: 100px;
-            &::before {
-                // display: none;
-            }
         }
 
         // Кнопка Бургер меню ---------------------------->
@@ -76,13 +266,14 @@
             right: 0;
             min-height: 100%;
             width: 100%;
-            background: rgba(0, 0, 0, 0.44);
+            // background: rgba(0, 0, 0, 0.44);
+            background-color: rgba(0, 0, 0, 0.95);
             z-index: 10;
             // transform: translateY(-1500px);
             transition: all 0.7s;
         }
         &__menu-active {
-            top: 74px;
+            top: 73px;
         }
 
         &__menu-items {
@@ -103,7 +294,435 @@
         &__menu-link {
             font-size: 21px;
         }
+
+        &__body {
+            margin-bottom: 222px;
+        }
+
+        &__body-img {
+            max-width: 140px;
+        }
+        &__body-img-text {
+            max-width: 317px;
+        }
+        &__body-title {
+            font-size: 44px;
+            line-height: 100%;
+        }
+        &__body-text {
+            margin-bottom: 70px;
+        }
+    }
+
+    .goods {
+        &::before {
+            width: 550px;
+            height: 2px;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+        &::after {
+            padding: 27px 30px;
+            font-size: 30px;
+            text-transform: uppercase;
+            top: -32px;
+        }
+
+        &__item-1 {
+            padding: 80px 10px 0;
+        }
+
+        &__item-wrap {
+            align-items: center;
+        }
+
+        &__sliders-title {
+            text-align: center;
+            margin-bottom: 20px;
+            font-size: 27px;
+            line-height: 34px;
+        }
+        &__sliders-title-wrap {
+            display: block;
+            max-width: 636px;
+            justify-content: space-between;
+            margin-bottom: 37px;
+        }
+        &__sliders-span {
+            height: 57px;
+            font-size: 25px;
+            line-height: 0px;
+            padding: 0px 27px;
+        }
+
+        &__tabs,
+        &__tabs-sec,
+        &__tabs-3,
+        &__tabs-4,
+        &__tabs-5 {
+            width: 100%;
+        }
+
+        &__tab-item-about,
+        &__tab-item-about-sec,
+        &__tab-item-about-3,
+        &__tab-item-about-4,
+        &__tab-item-about-5 {
+            margin-right: 20px;
+            padding: 12px 60px;
+            background-color: $green;
+            border-radius: 30px;
+            font-size: 30px;
+            line-height: 35px;
+        }
+
+        &__tab-item-setting,
+        &__tab-item-setting-sec,
+        &__tab-item-setting-3,
+        &__tab-item-setting-4,
+        &__tab-item-setting-5 {
+            padding: 13px 29px;
+            background-color: $red;
+            border-radius: 30px;
+            font-size: 30px;
+            line-height: 35px;
+        }
+        &__tab-content-img {
+            width: 100%;
+        }
+        &__button::after {
+            height: 3px;
+            width: 500px;
+        }
+    }
+
+    .slider {
+        padding: 0 10px;
+        max-width: 500px;
+        margin-bottom: 40px;
+        &__bottom-container {
+            margin-bottom: 40px;
+            & .swiper-pagination {
+                bottom: -5px;
+            }
+        }
+    }
+
+    .swiper-wrapper .swiper-slide {
+        height: 250px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .swiper-button-prev,
+    .swiper-button-next {
+        display: none;
+    }
+
+    .footer {
+        min-height: 410px;
+        &__date {
+            display: none;
+        }
+        &__date-mob {
+            display: block;
+        }
+        &__logo-partners {
+            margin: 0 20px;
+            max-width: 350px;
+        }
     }
 
     // Кнопка Бургер меню ------------- End --------------->
+}
+
+@media (max-width: 482px) {
+    body {
+        font-size: 18px;
+        line-height: 24px;
+    }
+    .about::after {
+        background-color: #16da12;
+        text-align: center;
+        padding: 23px 30px;
+        font-size: 22px;
+        line-height: 92.69%;
+        top: -32px;
+    }
+    .goods {
+        &::before {
+            width: 300px;
+            height: 1.5px;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+        &__button::after {
+            height: 2px;
+            width: 310px;
+        }
+
+        &__tab-item-about,
+        &__tab-item-about-sec,
+        &__tab-item-about-3,
+        &__tab-item-about-4,
+        &__tab-item-about-5 {
+            margin-right: 20px;
+            padding: 10px 30px;
+            background-color: $green;
+            border-radius: 30px;
+            font-size: 20px;
+            line-height: 30px;
+        }
+
+        &__tab-item-setting,
+        &__tab-item-setting-sec,
+        &__tab-item-setting-3,
+        &__tab-item-setting-4,
+        &__tab-item-setting-5 {
+            padding: 11px 29px;
+            background-color: $red;
+            border-radius: 30px;
+            font-size: 20px;
+            line-height: 30px;
+        }
+    }
+    .slider {
+        padding: 0 10px;
+        max-width: 350px;
+        margin-bottom: 20px;
+        &__top-img {
+            padding-left: 0;
+        }
+        &__bottom-container {
+            margin-bottom: 20px;
+            & .swiper-pagination {
+                bottom: -5px;
+            }
+        }
+    }
+    .settings {
+        &__inner {
+            padding-bottom: 30px;
+        }
+        &__title {
+            margin-top: 35px;
+        }
+        &__items {
+            padding: 10px;
+        }
+    }
+
+    .contacts {
+        &::after {
+            padding: 20px 30px;
+            font-size: 30px;
+            top: -22px;
+        }
+        &::before {
+            width: 300px;
+            height: 4.55px;
+        }
+        &__inner {
+            padding: 0 10px;
+        }
+        &__items {
+            padding-top: 100px;
+        }
+
+        &__item-nav,
+        &__item-phones,
+        &__item-email {
+            padding-left: 73px;
+            font-size: 20px;
+        }
+    }
+
+    .footer {
+        .show {
+            bottom: 30px;
+            right: -15px;
+        }
+    }
+}
+
+@media (max-width: 415px) {
+    .container {
+        padding: 0 5px;
+    }
+
+    .header {
+        min-height: 800px;
+        &__menu-active {
+            top: 119px;
+        }
+        &__body {
+            margin-bottom: 90px;
+        }
+        &__top-inner {
+            // display: block;
+            flex-direction: column;
+            align-items: flex-start;
+        }
+        &__contacts {
+            margin-top: 15px;
+        }
+        &__body-img {
+            max-width: 130px;
+            margin-bottom: 30px;
+            padding-top: 50px;
+        }
+        &__body-img-text {
+            max-width: 230px;
+        }
+        &__body-title {
+            font-size: 37px;
+        }
+        &__body-text {
+            margin-top: 20px;
+            font-size: 20px;
+            line-height: 25px;
+        }
+    }
+
+    .consult {
+        &__inner {
+            &.consult__inner::after {
+                padding: 22px 26px;
+                font-size: 28px;
+                top: -28px;
+            }
+        }
+        &__inner-wrap {
+            margin-top: 50px;
+        }
+        &__text-wrap {
+            max-width: 100%;
+            padding: 0 20px;
+            margin-right: 0;
+        }
+        &__title {
+            font-size: 35px;
+        }
+        &__text {
+            margin-top: 20px;
+            font-size: 18px;
+        }
+        .consult__form {
+            align-items: center;
+            width: 310px;
+            margin-right: 0;
+        }
+        &__input-name,
+        &__input-phone {
+            max-width: 300px;
+            background: #f9f9f9;
+            border: 2px solid rgba(148, 129, 129, 0.29);
+            border-radius: 38px;
+            padding: 15px 5px 8px 31px;
+        }
+
+        &__input-name {
+            margin: 21px 0 21px;
+        }
+
+        &__input-phone {
+            padding-left: 81px;
+        }
+        &__input-label {
+            &::before {
+                top: 19px;
+            }
+        }
+
+        &__btn {
+            margin: 25px 0 17px;
+            padding: 15px 68px;
+        }
+        &__form-text {
+            font-size: 15px;
+            line-height: 20px;
+        }
+    }
+
+    .about::after {
+        padding: 15px 22px;
+        font-size: 20px;
+        top: -28px;
+    }
+
+    .goods {
+        &::after {
+            padding: 22px 26px;
+            font-size: 28px;
+            top: -28px;
+        }
+
+        &__tab-item-about,
+        &__tab-item-about-sec,
+        &__tab-item-about-3,
+        &__tab-item-about-4,
+        &__tab-item-about-5 {
+            margin-right: 20px;
+            padding: 10px 30px;
+            background-color: $green;
+            border-radius: 30px;
+            font-size: 18px;
+            line-height: 30px;
+        }
+
+        &__tab-item-setting,
+        &__tab-item-setting-sec,
+        &__tab-item-setting-3,
+        &__tab-item-setting-4,
+        &__tab-item-setting-5 {
+            padding: 11px 10px;
+            background-color: $red;
+            border-radius: 30px;
+            font-size: 18px;
+            line-height: 30px;
+        }
+    }
+
+    .slider {
+        max-width: 300px;
+        margin-bottom: 10px;
+        &__bottom-container {
+            margin-bottom: 20px;
+            & .swiper-pagination {
+                bottom: -5px;
+            }
+        }
+    }
+
+    .footer {
+        &__inner {
+            display: block;
+        }
+        &__logo {
+            display: block;
+            margin: 0 auto;
+        }
+        &__date {
+            display: none;
+        }
+        &__date-mob {
+            display: block;
+        }
+        &__logo-partners {
+            display: block;
+            margin: 20px auto;
+            // margin: 0 0px;
+            padding: 0 10px;
+            max-width: 300px;
+        }
+        &__personal-data,
+        &__politics {
+            min-width: 100%;
+            text-align: center;
+            font-size: 18px;
+            display: block;
+            max-width: 100%;
+        }
+    }
 }
